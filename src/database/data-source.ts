@@ -1,4 +1,6 @@
 import { DataSource } from "typeorm";
+import Cliente from "../model/Cliente";
+import { CreateClienteTable1706571042020 } from "./migrations/1706571042020-CreateClienteTable";
 
 export const AppDataSource = new DataSource({
   type: "postgres",
@@ -9,7 +11,7 @@ export const AppDataSource = new DataSource({
   database: "postgres",
   synchronize: true,
   logging: true,
-  entities: [],
-  subscribers: [],
+  entities: [Cliente],
+  subscribers: [CreateClienteTable1706571042020],
   migrations: [],
 });

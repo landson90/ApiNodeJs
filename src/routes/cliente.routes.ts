@@ -4,6 +4,6 @@ import ClienteController from "../controller/ClienteController";
 const clienteRouter = Router();
 const clienteController = new ClienteController();
 
-clienteRouter.get("/", clienteController.findAll);
+clienteRouter.post("/", clienteController.findAll);
 
 export default clienteRouter;
